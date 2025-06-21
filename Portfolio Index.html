@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>J.Narasima Raja | Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #203a43, #2c5364);
+    color: #e1e8f0;
+    overflow-x: hidden;
+  }
+
+  /* Canvas background */
+  #background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+  }
+
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: 60px auto 60px auto;
+    padding: 25px 35px;
+    background: rgba(20, 30, 48, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  header h1 {
+    font-size: 3rem;
+    color: #4fd1c5; /* softer teal */
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.1;
+  }
+  header p {
+    font-size: 1.25rem;
+    color: #a3b1c6;
+    margin-top: 8px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  section {
+    margin-bottom: 45px;
+  }
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 22px;
+    color: #7dd3fc; /* cool blue */
+    border-bottom: 2px solid #4fd1c5;
+    padding-bottom: 6px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+  section p {
+    font-size: 1.1rem;
+    color: #b0b9cc;
+    line-height: 1.65;
+    letter-spacing: 0.02em;
+  }
+
+  /* Skills */
+  #skills ul {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  #skills li {
+    background: #112240;
+    padding: 14px 24px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(79, 209, 197, 0.3);
+    color: #4fd1c5;
+    font-weight: 600;
+    font-size: 1rem;
+    user-select: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  #skills li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(79, 209, 197, 0.5);
+  }
+
+  /* Projects */
+  #projects .project {
+    background: #112240;
+    padding: 28px 36px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 22px -10px rgba(0,0,0,0.75);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  #projects .project:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 42px -5px rgba(79, 209, 197, 0.4);
+  }
+  #projects .project strong {
+    color: #4fd1c5;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  #projects .project p {
+    color: #a3afca;
+    margin-top: 10px;
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+  }
+
+  /* Contact */
+  #contact p {
+    font-size: 1.1rem;
+    color: #b0b9cc;
+    letter-spacing: 0.02em;
+  }
+  #contact a {
+    color: #4fd1c5;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  #contact a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    color: #627d98;
+    padding: 32px 10px 12px 10px;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container {
+      margin: 20px 15px;
+      padding: 20px 25px;
+    }
+    header h1 {
+      font-size: 2.4rem;
+    }
+    section h2 {
+      font-size: 1.6rem;
+    }
+    #skills ul {
+      justify-content: center;
+    }
+  }
+</style>
+</head>
+<body>
+<canvas id="background-canvas"></canvas>
+
+<div class="container">
+  <header>
+    <h1>J. Narasima Raja</h1>
+    <p>Web Developer | Designer | Student</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am currently pursuing my Bachelor's degree in Computer Science and Engineering at Grace College of Engineering.
+      My journey started at St. Xavier Higher Secondary School. I enjoy creating clean, responsive websites and learning new technologies to solve problems efficiently.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Java</li>
+      <li>C Language</li>
+      <li>HTML &amp; CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <strong>Portfolio Website</strong>
+      <p>A modern, responsive portfolio website built to showcase my skills and projects with elegant design and smooth animations.</p>
+    </div>
+    <div class="project">
+      <strong>Game Development (In Progress)</strong>
+      <p>Developing a 2D game under departmental guidance, focusing on Unity and C# to enhance my programming and design skills.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:narasimaraja481@gmail.com">narasimaraja481@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
+  </section>
+</div>
+
+<footer>
+  © 2025 J. Narasima Raja
+</footer>
+
+<script>
+  // Canvas background with particles following cursor
+  const canvas = document.getElementById('background-canvas');
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  const particles = [];
+  const particleCount = 80;
+
+  function resize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  class Particle {
+    constructor() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.size = Math.random() * 3 + 1;
+      this.speedX = (Math.random() - 0.5) * 0.6;
+      this.speedY = (Math.random() - 0.5) * 0.6;
+      this.color = 'rgba(79, 209, 197, 0.85)';
+    }
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+
+      if(this.x > width || this.x < 0) this.speedX *= -1;
+      if(this.y > height || this.y < 0) this.speedY *= -1;
+    }
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+    }
+  }
+
+  for(let i=0; i<particleCount; i++) {
+    particles.push(new Particle());
+  }
+
+  window.addEventListener('mousemove', e => {
+    // Optional: could add attraction, but skipping for smooth simplicity
+  });
+
+  function connectParticles() {
+    for(let a=0; a < particleCount; a++) {
+      for(let b=a; b < particleCount; b++) {
+        let dx = particles[a].x - particles[b].x;
+        let dy = particles[a].y - particles[b].y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+        if(distance < 120) {
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(79, 209, 197, ${1 - distance/120})`;
+          ctx.lineWidth = 1;
+          ctx.moveTo(particles[a].x, particles[a].y);
+          ctx.lineTo(particles[b].x, particles[b].y);
+          ctx.stroke();
+          ctx.closePath();
+        }
+      }
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+    particles.forEach(p => {
+      p.update();
+      p.draw();
+    });
+    connectParticles();
+    requestAnimationFrame(animate);
+  }
+  animate();
+</script>
+</body>
+</html>
